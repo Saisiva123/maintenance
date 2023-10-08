@@ -10,7 +10,8 @@ import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
 import { NoAuthGuard } from './guards/no-auth.guard';
-import { MatDialogModule, MatIconModule, MatTableModule } from '@angular/material';
+import { MatDialogModule, MatIconModule, MatStepperModule, MatTableModule } from '@angular/material';
+import { MaintenanceFormComponent } from './main/maintenance-form/maintenance-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatDialogModule, MatIconModule, MatTableModule } from '@angular/materia
     BrowserAnimationsModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
   ],
   providers: [AuthService, AuthGuard, NoAuthGuard],
   bootstrap: [AppComponent]

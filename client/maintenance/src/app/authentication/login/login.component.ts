@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
   {
     let details = {...this.loginDetails.value, forUser: this.users.find((item:any) => item.selected).name}
     console.log(details)
+    if(this.loginDetails?.value.username && this.loginDetails?.value.password)
     this.authService.login(details)
   }
 

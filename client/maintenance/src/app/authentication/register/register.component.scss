@@ -2,6 +2,9 @@
     height: 100vh;
     .leftSec {
       width: 60%;
+      background-image: url('../../../assets/landing.jpeg');
+      background-size: cover;
+      background-position: 100% 50%;
     }
     .rightSec {
       width: 40%;
@@ -19,7 +22,7 @@
             box-shadow: 1px 1px 4px grey;
           }
           & > .section .activeSection {
-              background-color: #60928f4f;
+              background-color: #79B08F;
             }
           
         }
@@ -27,7 +30,7 @@
     }
     button {
       width: 105px;
-      background: #89abab;
+      background: #79B08F;
       color: white;
       height: 46px;
       font-weight: 600;

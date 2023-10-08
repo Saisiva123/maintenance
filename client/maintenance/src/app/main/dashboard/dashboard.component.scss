@@ -1,0 +1,20 @@
+::ng-deep
+{
+    .mat-step-header .mat-step-icon-selected
+    {
+        background-color: #3a867d;
+    }
+    .mat-step-header .mat-step-icon-state-edit 
+    {
+        background-color: #3a867d;
+    }
+    .mat-step-header .mat-step-label.mat-step-label-active
+    {
+        // color: #3a867d;
+    }
+}
+.dashboard
+{
+    height: calc(100% - 200px);
+    font-size: 13px;
+}

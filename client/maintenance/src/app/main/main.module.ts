@@ -8,6 +8,7 @@ import { UpcomingSchedulesComponent } from './upcoming-schedules/upcoming-schedu
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import {
   MatButtonModule,
+  MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatSidenavModule,
@@ -15,9 +16,11 @@ import {
 import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { MatTableModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MaintenanceFormComponent } from './maintenance-form/maintenance-form.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,7 @@ import {MatSelectModule} from '@angular/material/select';
     DashboardComponent,
     UpcomingSchedulesComponent,
     MaintenanceComponent,
-    ChatWindowComponent,
-    MaintenanceFormComponent,
+    ChatWindowComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,13 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     MatButtonModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    NgChartsModule
   ],
+  entryComponents: [MaintenanceFormComponent]
 })
-export class MainModule {}
+export class MainModule { }

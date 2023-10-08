@@ -1,2 +1,16 @@
+<div class="my-4 mx-auto">
+<h1 class="text-lg font-semibold">Maintenance Tasks Statistics:</h1>
+<canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+
+        [type]="'bar'" width="700px"
+        height="400px"
+        class="my-2">
+</canvas>
+</div>
+
 <p *ngIf = "!servicesList?.length">No Maintenance Tasks Added.</p>
 <button mat-raised-button (click) = "openDialog()">Add Maintenance Task</button>
