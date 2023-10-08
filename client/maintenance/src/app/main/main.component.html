@@ -1,1 +1,50 @@
-<p>main works!</p>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav sidenav " mode="side" [opened]="true">
+        <img class="mx-auto logo mb-3  px-3" src="../../assets/logo2.png">
+        <p class="text-xs mb-3 text-slate-400 px-3">Main Menu</p>
+        <div *ngFor="let item of menuItems" class="pl-2">
+            <div class="menuItem mb-2 flex justify-start gap-3 items-center cursor-pointer"
+                [class.activeMenu]="item.selected" (click)="selectMenuItem(item)">
+                <img [src]="item.selected ? item.activeIcon : item.icon" style="width: 17px; ">
+                <p class="font-normal text-sm">{{item.name}}</p>
+            </div>
+        </div>
+
+        <div class="logout flex justify-start gap-3 px-4 items-center cursor-pointer" (click) = "logout()">
+            <img src="../../assets/logout.png" style="width: '15px'; height: '15px'">
+            <p class="font-semibold">Logout</p>
+        </div>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        
+        <div class="header flex items-center gap-3 justify-between bg-white p-2 px-4">
+            <span class="flex items-center gap-3 justify-start">
+                <img class="cursor-pointer" src="../../assets/hamburger.png" (click)="drawer.toggle()" style="width: '17px';">
+                <img class="ml-10" src="../../assets/search.png" style="width: '15px';">
+                <input type = "text" placeholder = "Search Anything..." style="width:'300px'">
+            </span>
+           
+            <div class="details flex items-center gap-3 justify-start">
+                <img src="../../assets/user.jpeg">
+                <p class="font-semibold">Alexander</p>
+            </div>
+        </div>
+        <div class="welcome flex justify-start items-center gap-2 mt-4 px-4">
+            <h1 class="font-bold text-xl">Welcome back, Alexandro </h1>
+            <img src="../../assets/waving-hand.png" style="width: 20px;">
+        </div>
+        <p class="text-xs mt-1 text-slate-400 px-4">You have some notifications, please check out!</p>
+       
+        <div class="content px-4 mt-4">
+            <router-outlet></router-outlet>
+        </div>
+
+        <img class="chatbotIcon cursor-pointer" *ngIf = "!showChatWindow" src="../../assets/chatbot.png" width="100px" (click) = "toggleChatWindow()">
+        <div class="chatWindow" *ngIf="showChatWindow">
+            <app-chat-window (toggleWindow) = "toggleChatWindow($event)"></app-chat-window>
+        </div>
+    
+    </div>
+
+</mat-drawer-container>

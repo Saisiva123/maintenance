@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
   },
   {
-    path: 'dashboard',
+    path: 'main',
     canActivate: [NoAuthGuard],
     loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   }

@@ -1,0 +1,19 @@
+<div class="chatHeader p-3">
+    <img class="chatbotIcon mb-3" src="../../assets/chatbot.png" width="100px">
+    <p class="text-md font-semibold ">Hi there!</p>
+    <p class="text-xs font-semibold text-slate-500">I'm your Personal Assistant Lara</p>
+    <img class = "cursor-pointer"  (click) = "closeChatWindow()" src = "../../assets/close.png" style="width: 10px; position: absolute; top: 10px; right: 10px">
+</div>
+<div class="messageSection px-3 py-2" #messageSec>
+   
+    <p *ngFor="let message of messages" class="message p-2 mb-2 rounded" [class.userMessage] = "message.type == 'userMessage'" [class.botMessage] = "message.type == 'botMessage'">{{message.text}}</p>
+    <img src = "https://miro.medium.com/v2/resize:fit:1400/1*NM8Gu9fBMA4UzY1KEKjahg.gif" *ngIf="showProgress" style="width: 80px; clear: both;">
+    <!-- <p class="message p-2 mb-2 userMessage rounded" [class.userMessage]>I'm good thanks </p>
+    <p class="message p-2 mb-2 botMessage rounded" [class.botMessage]>Hii there how are you</p>
+    <p class="message p-2 mb-2 userMessage rounded" [class.userMessage]>I'm good thanks </p> -->
+
+</div>
+<div class="inputSearch flex justify-between items-center py-1">
+    <input type = "text" placeholder="Ask any question.." #inputTxt (keypress) = "onSearch($event)">
+    <img src = "../../assets/send.png" width="20px">
+</div>

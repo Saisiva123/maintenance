@@ -1,0 +1,48 @@
+.chatHeader
+{
+    background-color: rgb(238, 252, 245);
+    .chatbotIcon {
+        width: 44px;
+      }
+}
+.messageSection
+{
+    font-size: 13px;
+    height: calc(100% - 158px);
+    overflow: scroll;
+    // background-color: #f4f4f4b0;
+    & .message
+    {
+        max-width: 50%;
+    }
+    & .botMessage
+    {
+        background-color: #c0cbc1;
+        clear: both;
+    }
+    & .userMessage
+    {
+        background-color: #aeb3ae;
+        float: right;
+    }
+}
+.inputSearch
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    & > input[type='text']
+    {
+        width: 95%;
+        padding: 4px 10px;
+        border: none;
+        outline: none;
+        font-size: 13px ;
+    }
+    & > img
+    {
+        margin: 0px 10px 2px 0px
+    }
+}

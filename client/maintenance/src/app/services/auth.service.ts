@@ -13,7 +13,7 @@ export class AuthService {
   {
     console.log(details)
     sessionStorage.setItem('token',"dsdnc3j23283123bh1h3b");
-    this.router.navigate(["/dashboard"])
+    this.router.navigate(["/main"])
     // this.http.post("",{}).subscribe((res:any) => console.log(res))
   }
 

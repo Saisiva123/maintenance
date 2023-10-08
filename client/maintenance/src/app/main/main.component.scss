@@ -1,0 +1,61 @@
+.sidenav {
+  .logo {
+    width: 120px;
+  }
+  .menuItem {
+    padding: 10px 5px;
+    color: rgb(96, 95, 95);
+  }
+  .logout {
+    position: absolute;
+    bottom: 14px;
+  }
+  .activeMenu {
+    background-color: rgb(238, 252, 245);
+    color: #3a867d;
+    border-right: 4px solid #3a867d;
+  }
+}
+.sidenav-content {
+  // padding: 10px;
+  .header {
+    border-bottom: 1px solid rgb(220, 218, 218);
+    .welcome h1 {
+      letter-spacing: 0.5px;
+    }
+    .details img {
+      width: 31px;
+      border-radius: 50%;
+    }
+    input {
+      border: none;
+      outline: none;
+      font-size: 13px;
+    }
+  }
+  .chatbotIcon {
+    position: absolute;
+    right: 14px;
+    bottom: 13px;
+    width: 44px;
+  }
+  .chatWindow {
+    width: 400px;
+    height: 80%;
+    position: absolute;
+    right: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px grey;
+    bottom: 10px;
+    overflow: hidden;
+  }
+}
+::ng-deep {
+  .mat-drawer {
+    width: 230px !important;
+    height: 100vh;
+  }
+  .mat-drawer-content {
+    height: 100vh !important;
+  }
+}
