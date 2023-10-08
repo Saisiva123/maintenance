@@ -1,1 +1,28 @@
-<p>upcoming-schedules works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Service Name</th>
+            <th>Type</th>
+            <th>Days Left</th>
+            <th>Date Created</th>
+            <th>Date Scheduled</th>
+            <th>Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let data of schedules">
+            <td>{{data.serviceName}}</td>
+            <td>
+                <p [class]="data.type">{{data.type}}</p>
+            </td>
+            <td>{{data.daysLeft}}</td>
+            <td>{{data.dateCreated}}</td>
+            <td>{{data.scheduledFor}}</td>
+            <td>{{data.cost}}</td>
+            <td style="text-align: center;">
+                <img src="../../../assets/edit.png" width="12px" style="margin: 0 auto; cursor: pointer;">
+            </td>
+        </tr>
+    </tbody>
+</table>

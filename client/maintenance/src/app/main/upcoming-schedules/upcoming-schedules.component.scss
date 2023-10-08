@@ -1,0 +1,52 @@
+table
+{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    thead th
+    {
+        text-align: left;
+        padding: 10px 6px;
+        color: rgb(68, 67, 67);
+        font-weight: 500;
+        font-size:  14px;
+        &:last-child
+        {
+            text-align: center;
+        }
+    }
+    th,td
+    {
+        font-size: 13px;
+        padding: 9px 7px;
+        border-bottom: 1px solid lightgrey;
+        & .Vehicle
+        {
+            color: white;
+            width: max-content;
+            padding: 4px 10px;
+            border-radius: 8px;
+            background-color: rgb(72, 110, 225) ;
+        }
+        & .Health
+        {
+            color: white;
+            width: max-content;
+            padding: 4px 10px;
+            border-radius: 8px;
+            background-color: rgb(117, 184, 117) ;
+        }
+        & .Home
+        {
+            color: white;
+            width: max-content;
+            padding: 4px 10px;
+            border-radius: 8px;
+            background-color: rgb(236, 66, 117) ;
+        }
+    }
+}
+.active
+{
+    color: rgb(192, 77, 112);
+}

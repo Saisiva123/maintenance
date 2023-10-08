@@ -6,9 +6,13 @@ import { MainComponent } from './main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UpcomingSchedulesComponent } from './upcoming-schedules/upcoming-schedules.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
-import { MatIconModule, MatInputModule, MatSidenavModule } from '@angular/material';
+import {
+  MatIconModule,
+  MatInputModule,
+  MatSidenavModule,
+} from '@angular/material';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
-
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,15 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
     DashboardComponent,
     UpcomingSchedulesComponent,
     MaintenanceComponent,
-    ChatWindowComponent
+    ChatWindowComponent,
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
     MatSidenavModule,
     MatIconModule,
-    MatInputModule
-  ]
+    MatInputModule,
+    MatTableModule,
+  ],
 })
-export class MainModule { }
+export class MainModule {}
