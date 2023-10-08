@@ -10,7 +10,7 @@ import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
 import { NoAuthGuard } from './guards/no-auth.guard';
-import { MatIconModule, MatTableModule } from '@angular/material';
+import { MatDialogModule, MatIconModule, MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { MatIconModule, MatTableModule } from '@angular/material';
     AuthenticationModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [AuthService, AuthGuard, NoAuthGuard],
   bootstrap: [AppComponent]

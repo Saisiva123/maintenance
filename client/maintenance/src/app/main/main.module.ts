@@ -7,12 +7,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UpcomingSchedulesComponent } from './upcoming-schedules/upcoming-schedules.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import {
+  MatButtonModule,
   MatIconModule,
   MatInputModule,
   MatSidenavModule,
 } from '@angular/material';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { MatTableModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MaintenanceFormComponent } from './maintenance-form/maintenance-form.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,7 @@ import { MatTableModule } from '@angular/material';
     UpcomingSchedulesComponent,
     MaintenanceComponent,
     ChatWindowComponent,
+    MaintenanceFormComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +35,10 @@ import { MatTableModule } from '@angular/material';
     MatIconModule,
     MatInputModule,
     MatTableModule,
+    FormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatSelectModule
   ],
 })
 export class MainModule {}

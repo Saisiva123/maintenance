@@ -3,7 +3,7 @@
         <tr>
             <th>Service Name</th>
             <th>Type</th>
-            <th>Days Left</th>
+            <th style="text-align: center;">Days Left</th>
             <th>Date Created</th>
             <th>Date Scheduled</th>
             <th>Cost</th>
@@ -12,16 +12,24 @@
     </thead>
     <tbody>
         <tr *ngFor = "let data of schedules">
-            <td>{{data.serviceName}}</td>
             <td>
-                <p [class]="data.type">{{data.type}}</p>
+                <input *ngIf="data.editable" [(ngModel)] = "data.serviceName" >
+                <p  *ngIf="!data.editable">{{data.serviceName}}</p>
             </td>
-            <td>{{data.daysLeft}}</td>
+            <td>
+                <input *ngIf="data.editable" [(ngModel)] = "data.type" >
+                <p [class]="data.type"  *ngIf="!data.editable">{{data.type}}</p>
+            </td>
+            <td style="text-align: center;">{{data.daysLeft}}</td>
             <td>{{data.dateCreated}}</td>
             <td>{{data.scheduledFor}}</td>
-            <td>{{data.cost}}</td>
+            <td>
+                <input *ngIf="data.editable" [(ngModel)] = "data.cost">
+                <p [class]="data.cost"  *ngIf="!data.editable">{{data.cost}}</p>
+            </td>
             <td style="text-align: center;">
-                <img src="../../../assets/edit.png" width="12px" style="margin: 0 auto; cursor: pointer;">
+                <img  *ngIf="!data.editable" src="../../../assets/edit.png" width="12px" style="margin: 0 auto; cursor: pointer;" (click) = "edit(data)">
+                <button  *ngIf="data.editable" mat-button (click) = "saveChanges(data)">Save</button>
             </td>
         </tr>
     </tbody>
